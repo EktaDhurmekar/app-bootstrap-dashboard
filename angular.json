@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "node_modules/font-awesome/css/font-awesome.css",
+              "src/styles/app.scss"
+             ],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,13 +97,25 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/font-awesome/css/font-awesome.css",
+              "src/styles/app.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "dashboard-app"
+  "defaultProject": "dashboard-app",
+  "schematics": {
+    "@schematics/angular:component": {
+        "prefix": "app",
+        "styleext": "scss"
+    },
+    "@schematics/angular:directive": {
+        "prefix": "app"
+    }
+}
 }
